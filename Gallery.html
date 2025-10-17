@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MESWO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #FF9933;
+            --off-white: #F8F7F4;
+            --dark-gray: #374151;
+            --light-gray: #6B7280;
+            --saffron-light: #FFF5E6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        .gallery-item {
+            cursor: pointer;
+        }
+        #lightbox {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+                 <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="preservation.html" class="text-maroon font-semibold">Gallery</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="preservation.html" class="block py-2 text-maroon font-semibold">Gallery</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-white py-20 md:py-32">
+             <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1569420021669-9528037145b5?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-20" alt="Monastery Interior">
+            </div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h1 class="text-4xl md:text-5xl font-serif text-maroon mb-4">Visual Treasures of Sikkim</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">A visual journey into the sacred art, architecture, and daily life of Sikkim's monastic traditions.</p>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-serif text-center text-maroon mb-12">Explore the Collection</h2>
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="gallery-item group overflow-hidden rounded-lg">
+                        <img src="https://cdn.shopify.com/s/files/1/0442/7218/9604/files/Untitled-1_067bba1c-b6c8-4ce9-889a-82444d1448e2.jpg?v=1645095588" alt="Thangka Painting" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                     <div class="gallery-item group overflow-hidden rounded-lg col-span-2">
+                        <img src="https://thumbs.dreamstime.com/b/young-buddhist-monks-bodhgaya-23123990.jpg" alt="Monastery Interior" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                     <div class="gallery-item group overflow-hidden rounded-lg">
+                        <img src="https://static.toiimg.com/photo/msid-86094629,width-96,height-65.cms" alt="Ritual Object" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                     <div class="gallery-item group overflow-hidden rounded-lg col-span-2">
+                        <img src="https://trekinsikkim.in/_next/image?url=https%3A%2F%2Fupload.trekinsikkim.in%2Fuploads%2Fmedia-gallery%2Ffiles-1748693739660-582424567&w=3840&q=75" alt="Cham Dance" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                     <div class="gallery-item group overflow-hidden rounded-lg">
+                        <img src="https://indianexpress.com/wp-content/uploads/2023/05/chaam-2023.png?w=468" alt="Statue Detail" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="gallery-item group overflow-hidden rounded-lg">
+                        <img src="https://thumbs.dreamstime.com/b/young-monk-exercise-24691286.jpg" alt="Ancient Monastery Mural" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                     <div class="gallery-item group overflow-hidden rounded-lg">
+                        <img src="https://nomadsaikat.com/wp-content/uploads/2023/11/Monasteries-of-Sikkim.webp" alt="Pemayangtse Monastery view" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[100] hidden opacity-0">
+        <span id="lightbox-close" class="absolute top-5 right-8 text-white text-5xl font-bold cursor-pointer hover:text-gray-300">&times;</span>
+        <img id="lightbox-image" src="" alt="Enlarged gallery image" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                         <li><a href="preservation.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Lightbox functionality
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImage.src = imgSrc;
+                lightbox.classList.remove('hidden');
+                setTimeout(() => lightbox.classList.remove('opacity-0'), 20); // Fade in
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImage.src = ''; // Clear src to stop loading
+            }, 300); // Wait for fade out transition
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        
+        lightbox.addEventListener('click', (e) => {
+            // Close if clicked on the background overlay, not the image itself
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

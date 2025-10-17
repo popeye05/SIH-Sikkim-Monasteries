@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar - MESWO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #FF9933;
+            --off-white: #F8F7F4;
+            --dark-gray: #374151;
+            --light-gray: #6B7280;
+            --saffron-light: #FFF5E6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+                 <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-maroon font-semibold">Events</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-maroon font-semibold">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-serif text-maroon mb-4">Community & Events</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover upcoming pujas, teachings, festivals, and community gatherings at monasteries across Sikkim.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white p-4 rounded-lg shadow-md mb-12 sticky top-24 z-40">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <select class="w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                    <option>All Months</option>
+                    <option>September 2025</option>
+                    <option>October 2025</option>
+                    <option>November 2025</option>
+                    <option>December 2025</option>
+                </select>
+                <select class="w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                    <option>All Categories</option>
+                    <option>Puja</option>
+                    <option>Teaching</option>
+                    <option>Festival</option>
+                    <option>Community</option>
+                </select>
+                <select class="md:col-span-2 w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                    <option>All Monasteries</option>
+                    <option>Rumtek Monastery</option>
+                    <option>Pemayangtse Monastery</option>
+                    <option>Tashiding Monastery</option>
+                    <option>Enchey Monastery</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Events List -->
+        <div class="space-y-8">
+            <!-- Event Item 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col sm:flex-row items-start gap-6">
+                <div class="text-center sm:text-left sm:w-32">
+                    <p class="text-maroon font-bold text-xl">SEP</p>
+                    <p class="text-4xl font-bold text-gray-800">25</p>
+                    <p class="text-gray-500">2025</p>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                    <span class="text-sm font-medium bg-saffron/20 text-saffron-dark px-3 py-1 rounded-full">Teaching</span>
+                    <h3 class="text-2xl font-serif text-maroon mt-2 mb-2">Introduction to the Bodhisattva's Way of Life</h3>
+                    <p class="text-gray-600 mb-3">A weekend teaching series by Khenpo Sonam on Shantideva's classic text. Open to all levels of practitioners.</p>
+                    <p class="text-sm text-gray-500 font-medium"><strong>Location:</strong> Rumtek Monastery</p>
+                </div>
+            </div>
+
+            <!-- Event Item 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col sm:flex-row items-start gap-6">
+                 <div class="text-center sm:text-left sm:w-32">
+                    <p class="text-maroon font-bold text-xl">OCT</p>
+                    <p class="text-4xl font-bold text-gray-800">15</p>
+                    <p class="text-gray-500">2025</p>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                     <span class="text-sm font-medium bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Puja</span>
+                    <h3 class="text-2xl font-serif text-maroon mt-2 mb-2">Medicine Buddha Puja for Healing</h3>
+                    <p class="text-gray-600 mb-3">A monthly group practice dedicated to generating healing energy for oneself and all sentient beings facing illness and hardship.</p>
+                    <p class="text-sm text-gray-500 font-medium"><strong>Location:</strong> Pemayangtse Monastery</p>
+                </div>
+            </div>
+            
+            <!-- Event Item 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col sm:flex-row items-start gap-6">
+                 <div class="text-center sm:text-left sm:w-32">
+                    <p class="text-maroon font-bold text-xl">NOV</p>
+                    <p class="text-4xl font-bold text-gray-800">04</p>
+                    <p class="text-gray-500">2025</p>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                     <span class="text-sm font-medium bg-red-100 text-red-800 px-3 py-1 rounded-full">Festival</span>
+                    <h3 class="text-2xl font-serif text-maroon mt-2 mb-2">Lhabab Duchen Festival</h3>
+                    <p class="text-gray-600 mb-3">Commemorating the Buddha's descent from the heavenly realm. A day of merit-multiplying activities and prayers.</p>
+                    <p class="text-sm text-gray-500 font-medium"><strong>Location:</strong> All Monasteries</p>
+                </div>
+            </div>
+
+             <!-- Event Item 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col sm:flex-row items-start gap-6">
+                 <div class="text-center sm:text-left sm:w-32">
+                    <p class="text-maroon font-bold text-xl">DEC</p>
+                    <p class="text-4xl font-bold text-gray-800">10</p>
+                    <p class="text-gray-500">2025</p>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                     <span class="text-sm font-medium bg-green-100 text-green-800 px-3 py-1 rounded-full">Community</span>
+                    <h3 class="text-2xl font-serif text-maroon mt-2 mb-2">Annual Winter Blanket Drive</h3>
+                    <p class="text-gray-600 mb-3">Join the local community and monks in collecting and distributing warm clothing and blankets for those in need during the cold season.</p>
+                    <p class="text-sm text-gray-500 font-medium"><strong>Location:</strong> Tashiding Monastery</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-16">
+            <button class="bg-maroon text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all font-semibold">Load More Events</button>
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

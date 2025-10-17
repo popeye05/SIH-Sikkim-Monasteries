@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESWO - Monastic Education and Spiritual Worship Organization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #FF9933;
+            --off-white: #F8F7F4;
+            --dark-gray: #374151;
+            --light-gray: #6B7280;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1593328397398-5a4816c7a78a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .maroon { color: var(--maroon); }
+        .saffron { color: var(--saffron); }
+        .bg-maroon { background-color: var(--maroon); }
+        .bg-saffron { background-color: var(--saffron); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+                <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+                <a href="Gallery.html" class="text-gray-600 hover:text-maroon transition-all">Gallery</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section 
+        class="h-screen text-white flex items-center bg-cover bg-center bg-no-repeat" 
+        style="background-image: url('https://folsomtimes.com/wp-content/uploads/2025/01/Tibetan-Monks-1.jpg');">
+        
+        <div class="bg-gradient-to-t from-black/80 via-black/60 to-transparent w-full h-full flex flex-col justify-end pb-24">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-4 drop-shadow-xl">The Heart of Sikkim's Monastic Tradition</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto drop-shadow-lg">Discover. Learn. Practice. The digital gateway to the spiritual heritage of Sikkim's monasteries.</p>
+                <a href="#" class="mt-8 inline-block bg-amber-500 text-red-900 font-bold px-8 py-3 rounded-lg hover:bg-amber-600 transition-all transform hover:scale-105 shadow-lg">Explore the Monasteries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-maroon mb-6">Our Sacred Mission</h2>
+            <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                The Monastic Education and Spiritual Worship Organization (MESWO) is dedicated to the preservation, promotion, and propagation of Sikkim's profound Buddhist heritage. We serve as a central body to support our monasteries, archive ancient wisdom, and share the timeless practice of meditation with the world.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Monastery Section -->
+    <section class="py-24 bg-off-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-maroon mb-12">Featured Monastery: Rumtek</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 rounded-lg shadow-lg">
+                <div class="md:w-1/2">
+                    <img src="https://www.karmapa.org/wp-content/uploads/Rumtek_Monastery_-_Inside_Close_View-1400px-cropped.jpg" alt="Rumtek Monastery" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">A Beacon of the Karma Kagyu Lineage</h3>
+                    <p class="mb-4 text-gray-600">Perched on a hill facing Gangtok, Rumtek Monastery is one of the most significant centers of Tibetan Buddhism in the world. Originally built in the 16th century, it was re-established by the 16th Karmapa in the 1960s to preserve the teachings of his lineage.</p>
+                    <p class="mb-6 text-gray-600">Today, it stands as a vibrant hub of monastic life, education, and practice, housing sacred relics and hosting elaborate ceremonies that draw devotees from across the globe.</p>
+                    <a href="https://www.karmapa.org/karma-kagyu/rumtek-monastery/" class="font-bold text-maroon hover:underline">Learn more about Rumtek &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Upcoming Events Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-maroon mb-12">Join Us: Upcoming Events</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="border border-gray-200 rounded-lg p-6 flex items-start space-x-4 hover:shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="text-center bg-maroon text-white rounded-lg px-4 py-2">
+                        <span class="block text-2xl font-bold">28</span>
+                        <span class="block text-sm">SEP</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Guru Rinpoche's Birthday</h3>
+                        <p class="text-sm text-gray-500">Pemayangtse Monastery</p>
+                        <a href="#" class="text-maroon text-sm font-semibold mt-2 inline-block">View Details &rarr;</a>
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="border border-gray-200 rounded-lg p-6 flex items-start space-x-4 hover:shadow-xl hover:-translate-y-2 transition-all">
+                     <div class="text-center bg-maroon text-white rounded-lg px-4 py-2">
+                        <span class="block text-2xl font-bold">15</span>
+                        <span class="block text-sm">OCT</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Annual Cham Dance Festival</h3>
+                        <p class="text-sm text-gray-500">Enchey Monastery</p>
+                        <a href="#" class="text-maroon text-sm font-semibold mt-2 inline-block">View Details &rarr;</a>
+                    </div>
+                </div>
+                <!-- Event Card 3 -->
+                <div class="border border-gray-200 rounded-lg p-6 flex items-start space-x-4 hover:shadow-xl hover:-translate-y-2 transition-all">
+                     <div class="text-center bg-maroon text-white rounded-lg px-4 py-2">
+                        <span class="block text-2xl font-bold">10</span>
+                        <span class="block text-sm">NOV</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Lhabab Duchen</h3>
+                        <p class="text-sm text-gray-500">All Monasteries</p>
+                        <a href="#" class="text-maroon text-sm font-semibold mt-2 inline-block">View Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                 <a href="events.html" class="bg-maroon text-white font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all">View Full Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- From the Dharma Treasury -->
+    <section class="py-24 bg-off-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 rounded-lg shadow-lg">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-serif text-maroon mb-4">From the Dharma Treasury</h2>
+                    <h3 class="text-2xl font-bold mb-4">The Essence of Bodhicitta</h3>
+                    <p class="mb-6 text-gray-600">Delve into a profound teaching on Bodhicitta, the compassionate aspiration for enlightenment for the benefit of all beings. This foundational Mahayana concept is the very heart of the Bodhisattva path. Learn about its two aspects—aspirational and practical—and discover methods to cultivate this boundless mind.</p>
+                    <a href="#" class="bg-saffron text-maroon font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all">Read the Teaching</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://m.media-amazon.com/images/I/81UnWDbNujS._UF1000,1000_QL80_.jpg" alt="Ancient Buddhist Texts" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Word of Wisdom -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-maroon mb-6">A Word of Wisdom</h2>
+            <blockquote class="max-w-3xl mx-auto">
+                <p class="text-2xl italic text-gray-700 leading-relaxed">"The mind is like a clear sky. Clouds, which are thoughts and emotions, come and go, but the sky itself remains unstained and limitless. To meditate is to rest as the sky."</p>
+                <cite class="block mt-4 text-gray-500 not-italic">— A Teaching from a Sikkim Lama</cite>
+            </blockquote>
+        </div>
+    </section>
+    
+    <!-- Support CTA -->
+    <section class="py-24 bg-maroon text-white">
+         <div class="container mx-auto px-6 text-center">
+             <h2 class="text-3xl md:text-4xl font-serif mb-4">Support Our Sacred Mission</h2>
+             <p class="max-w-3xl mx-auto mb-8">Your generosity helps us preserve ancient manuscripts, support our monastic community, and share these timeless teachings with the world. Every contribution, large or small, makes a difference.</p>
+             <a href="support.html" class="bg-saffron text-maroon font-bold px-10 py-4 rounded-lg hover:bg-opacity-90 transition-transform transform hover:scale-105 shadow-lg">Make a Donation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

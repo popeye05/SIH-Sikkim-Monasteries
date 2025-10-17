@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Visit - MESWO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #FF9933;
+            --off-white: #F8F7F4;
+            --dark-gray: #374151;
+            --light-gray: #6B7280;
+            --saffron-light: #FFF5E6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        .saffron-light { background-color: var(--saffron-light); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+                 <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="visit.html" class="text-maroon font-semibold">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-maroon font-semibold">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gray-700 py-20 md:py-32 text-white">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1593538462085-280a9b83f3d7?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Prayer flags in the Himalayas">
+            </div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h1 class="text-4xl md:text-5xl font-serif mb-4">A Journey to the Sacred Heart of the Himalayas</h1>
+                <p class="text-lg text-gray-200 max-w-3xl mx-auto">Your guide to a respectful and enriching pilgrimage to the monasteries of Sikkim.</p>
+            </div>
+        </section>
+
+        <!-- Practical Information -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-serif text-center text-maroon mb-12">Planning Your Journey</h2>
+                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-maroon">Getting to Sikkim</h3>
+                        <p class="text-gray-600"><strong>By Air:</strong> The nearest major airport is Bagdogra (IXB) in West Bengal. Pakyong (PYG) is Sikkim's own airport with limited connectivity.
+                        <br><strong>By Rail:</strong> New Jalpaiguri (NJP) is the closest major railway station.
+                        <br><strong>By Road:</strong> Taxis and buses are available from Bagdogra, NJP, and Siliguri.</p>
+                     </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-maroon">Best Time to Visit</h3>
+                        <p class="text-gray-600"><strong>Mar-May (Spring):</strong> Pleasant weather and clear views of the mountains.
+                        <br><strong>Oct-Dec (Autumn):</strong> Crisp air, sunny days, and major festivals.
+                        <br><strong>Jun-Sep (Monsoon):</strong> Lush greenery, but be prepared for rain and potential landslides.</p>
+                     </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-maroon">Permits & Regulations</h3>
+                        <p class="text-gray-600">Foreign nationals require a Restricted Area Permit (RAP). All visitors, including domestic tourists, need a Protected Area Permit (PAP) for areas like Tsomgo Lake, North Sikkim, etc. Ensure you have valid ID proofs.</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Cultural Etiquette -->
+        <section class="py-20 saffron-light">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-serif text-center text-maroon mb-12">Sacred Etiquette: A Visitor's Guide</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10003;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Dress Modestly</h4>
+                            <p>Cover shoulders and knees when entering monastic premises.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10003;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Circumambulate Clockwise</h4>
+                            <p>Always walk around stupas, temples, and prayer wheels in a clockwise direction (parikrama).</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10003;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Ask Before Photographing</h4>
+                            <p>Respect privacy, especially of monks. Photography is often prohibited inside prayer halls.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10007;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Do Not Touch Artifacts</h4>
+                            <p>Refrain from touching statues, murals, thangkas, or ritual objects.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10007;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Avoid Loud Noises</h4>
+                            <p>Maintain silence and serenity within the monastery grounds.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <span class="text-2xl text-maroon mt-1">&#10007;</span>
+                        <div>
+                            <h4 class="font-bold text-lg">Do Not Point Feet</h4>
+                            <p>When sitting, avoid pointing the soles of your feet towards altars or revered lamas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggested Itineraries -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-serif text-center text-maroon mb-12">Suggested Itineraries</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Itinerary Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597818231998-a85a498a4a58?q=80&w=1974&auto=format&fit=crop" alt="Rumtek Monastery" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon mb-2">The Heritage Trail (5 Days)</h3>
+                            <p class="text-gray-600">A journey through Sikkim's most historically significant monasteries, including Rumtek, Pemayangtse, and Tashiding.</p>
+                        </div>
+                    </div>
+                    <!-- Itinerary Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1628288278242-b0768b4e4130?q=80&w=2070&auto=format&fit=crop" alt="Monk looking at mountains" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon mb-2">A Spiritual Retreat (7 Days)</h3>
+                            <p class="text-gray-600">An immersive experience focusing on monasteries that offer teachings and quiet contemplation in serene environments.</p>
+                        </div>
+                    </div>
+                    <!-- Itinerary Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617453313052-e781b7a13d7c?q=80&w=1964&auto=format&fit=crop" alt="Cham dance festival" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon mb-2">Festival Chaser's Guide</h3>
+                            <p class="text-gray-600">Plan your trip around vibrant monastic festivals like Losar (New Year) or the sacred masked dances (Cham).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

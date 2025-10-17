@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MESWO - Monastic Education and Spiritual Worship Organization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #6D2828; /* A deeper, more sophisticated maroon */
+            --maroon-dark: #4C1D1D;
+            --saffron: #FF9933;
+            --off-white: #F9F8F6; /* Slightly warmer off-white */
+            --dark-gray: #2d3748; /* Softer dark gray */
+            --light-gray: #718096;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        /* Styling for timeline effect in history section */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--saffron);
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.6rem;
+            top: 0.1rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: var(--saffron);
+            border: 2px solid var(--off-white);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-maroon font-semibold border-b-2 border-maroon">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+               <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-5 py-2 rounded-lg hover:bg-maroon-dark transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="about.html" class="block py-2 text-maroon font-semibold">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-28 text-center">
+                 <h1 class="text-4xl md:text-6xl font-serif font-normal text-maroon mb-4 tracking-tight">Our Sacred Mandate</h1>
+                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">Uniting Sikkim's monasteries to preserve a 1300-year-old spiritual heritage and share its timeless wisdom with the world.</p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision with more impactful text -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-white p-10 rounded-lg shadow-lg">
+                        <h2 class="text-3xl font-serif text-maroon mb-4">Our Mission</h2>
+                        <p class="text-gray-700 leading-relaxed text-base">To serve as the central coordinating body for the monasteries of Sikkim, ensuring the authentic preservation and vibrant continuation of their unique spiritual, cultural, and intellectual lineage. We actively protect sacred texts, support rigorous monastic education, and foster a global sangha of practitioners and patrons dedicated to the Dharma.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-lg shadow-lg">
+                        <h2 class="text-3xl font-serif text-maroon mb-4">Our Vision</h2>
+                        <p class="text-gray-700 leading-relaxed text-base">A world where the profound wisdom of Sikkim's monastic traditions is recognized as a vital source of peace and insight. We envision a future where these timeless teachings are accessible to all who seek them, creating a bridge of understanding between ancient knowledge and the complexities of the modern world, thus ensuring their relevance for generations to come.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Highly Detailed History Section -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-serif font-normal text-maroon mb-6">A Legacy of Dharma in the Himalayas</h2>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto">The story of Buddhism in Sikkim is not merely history; it is a living narrative of faith, prophecy, and enduring wisdom that has shaped the very soul of this sacred land.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <!-- Timeline Structure -->
+                    <div>
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-2xl font-serif font-semibold text-maroon mb-3">The Ancient Prophecy — 8th Century</h3>
+                            <p class="text-gray-700 leading-relaxed">The spiritual history of Sikkim begins with the enlightened master Padmasambhava, revered as Guru Rinpoche. During his monumental journey to Tibet, he entered this hidden Himalayan valley, which he recognized as a *Beyul*—a sacred hidden land destined to be a refuge for the Dharma. He blessed the mountains, caves, and rivers, consecrating sites like the sacred Tashiding, and prophesied that in centuries to come, Buddhism would flourish here when it faced peril elsewhere. This profound act of consecration laid the indestructible spiritual foundation for all that would follow.</p>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                             <h3 class="text-2xl font-serif font-semibold text-maroon mb-3">The Dawn of a Kingdom — 17th Century</h3>
+                             <p class="text-gray-700 leading-relaxed mb-4">In 1642, Guru Rinpoche's prophecy was spectacularly fulfilled. Three great lamas—Lhatsun Namkha Jigme of the Nyingma school, Kathok Rigzin Chenpo, and Ngadak Sempa Chenpo—arrived in Sikkim from three different directions, guided by a shared vision. They converged at a place they named Yuksom, meaning "the meeting place of the three learned ones." There, they sought out Phuntsog Namgyal, a man of noble lineage, and in a sacred ceremony, consecrated him as the first Chogyal, or "Dharma King," of Sikkim. This established the Namgyal dynasty and founded a Buddhist kingdom that would protect and propagate the teachings for over 300 years.</p>
+                             <img src="https://images.unsplash.com/photo-1620667576483-8a3a3b0b0b0b?q=80&w=1974&auto=format&fit=crop" alt="Coronation throne at Yuksom" class="rounded-lg shadow-lg w-full h-auto mt-6">
+                        </div>
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                             <h3 class="text-2xl font-serif font-semibold text-maroon mb-3">The Flourishing of Monasteries — 18th–20th Century</h3>
+                             <p class="text-gray-700 leading-relaxed">With royal patronage, a golden age of monastic construction began. The first monastery, Dubdi, was built near Yuksom in 1701. This was swiftly followed by the establishment of the great monastic centers that would become the pillars of Sikkimese Buddhism: Pemayangtse, the premier monastery of the Nyingma lineage; Tashiding, the spiritual heart of Sikkim; and Rumtek, which would later become the main seat of the Karma Kagyu lineage in exile. These monasteries became vibrant hubs of philosophy, meditation, and sacred arts, preserving an unparalleled legacy of Vajrayana Buddhism.</p>
+                        </div>
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                             <h3 class="text-2xl font-serif font-semibold text-maroon mb-3">The Modern Era & The Birth of MESWO — 21st Century</h3>
+                             <p class="text-gray-700 leading-relaxed">In the face of globalization and the challenges of the modern era, the monastic bodies of Sikkim recognized a pressing need for a unified voice and a coordinated strategy for preservation. After extensive consultations, the Monastic Education and Spiritual Worship Organization (MESWO) was formally established in 2020. It was born from a collective aspiration to safeguard Sikkim's precious heritage from dilution and ensure its authentic transmission to future generations, marking a new chapter in this ancient and sacred legacy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Our Core Values Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-serif text-center text-maroon mb-12">Our Core Values</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-serif text-maroon mb-3">Authenticity</h3>
+                        <p class="text-gray-600 leading-relaxed">Upholding the purity and integrity of the Dharma teachings as transmitted through our ancient lineages.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-serif text-maroon mb-3">Preservation</h3>
+                        <p class="text-gray-600 leading-relaxed">Committing to the meticulous care of our sacred texts, art, architecture, and cultural traditions.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-serif text-maroon mb-3">Compassion</h3>
+                        <p class="text-gray-600 leading-relaxed">Ensuring all our actions are motivated by the Bodhisattva ideal of benefiting all sentient beings.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-serif text-maroon mb-3">Accessibility</h3>
+                        <p class="text-gray-600 leading-relaxed">Making the wisdom of our traditions available to the global community in a respectful and meaningful way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Council -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-serif text-center text-maroon mb-16">Leadership Council</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
+                    <!-- Profile Card 1 -->
+                    <div class="bg-off-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <img src="https://placehold.co/200x200/6D2828/FFFFFF?text=Lama+T." class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white" alt="Lama Tsering">
+                        <h3 class="text-xl font-bold text-maroon">Lama Tsering</h3>
+                        <p class="text-gray-600 font-semibold">Chairman</p>
+                        <p class="text-sm mt-2 text-gray-500">A senior lama from the Pemayangtse Monastery, entrusted with guiding the overall vision of MESWO.</p>
+                    </div>
+                    <!-- Profile Card 2 -->
+                    <div class="bg-off-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <img src="https://placehold.co/200x200/6D2828/FFFFFF?text=Anila+P." class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white" alt="Anila Pema">
+                        <h3 class="text-xl font-bold text-maroon">Anila Pema</h3>
+                        <p class="text-gray-600 font-semibold">Head of Archives & Preservation</p>
+                        <p class="text-sm mt-2 text-gray-500">A respected scholar from Rumtek Monastery, leading the critical efforts of digital and physical preservation.</p>
+                    </div>
+                    <!-- Profile Card 3 -->
+                    <div class="bg-off-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <img src="https://placehold.co/200x200/6D2828/FFFFFF?text=Khenpo+S." class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white" alt="Khenpo Sonam">
+                        <h3 class="text-xl font-bold text-maroon">Khenpo Sonam</h3>
+                        <p class="text-gray-600 font-semibold">Director of Monastic Education</p>
+                        <p class="text-sm mt-2 text-gray-500">An esteemed Khenpo from Tashiding, responsible for curriculum and scholastic standards across member monasteries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

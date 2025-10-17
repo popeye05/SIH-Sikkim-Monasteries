@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us - MESWO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #6D2828;
+            --maroon-dark: #4C1D1D;
+            --saffron: #FF9933;
+            --gold: #D4AF37;
+            --off-white: #F9F8F6;
+            --dark-gray: #2d3748;
+            --saffron-light: #FFF5E6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all { transition: all 0.3s ease-in-out; }
+        .saffron-light { background-color: var(--saffron-light); }
+        .form-input {
+            @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-saffron focus:border-saffron;
+        }
+        .amount-btn {
+            @apply w-full py-3 text-center border border-gray-300 rounded-md cursor-pointer hover:bg-saffron-light hover:border-maroon transition-all;
+        }
+        .amount-btn.selected {
+            @apply bg-maroon text-white border-maroon;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-gray-600 hover:text-maroon transition-all">Archives</a>
+                <a href="meditation.html" class="text-gray-600 hover:text-maroon transition-all">Meditation</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+                <a href="preservation.html" class="text-gray-600 hover:text-maroon transition-all">Gallery</a>
+                <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="shop.html" class="relative text-gray-700 hover:text-maroon transition-all">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="cart-count-bubble" class="cart-count">0</span>
+                </a>
+                <a href="support.html" class="hidden md:block bg-maroon text-white px-5 py-2 rounded-lg hover:bg-maroon-dark transition-all">Support Us</a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 ml-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-gray-600 hover:text-maroon">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="preservation.html" class="block py-2 text-gray-600 hover:text-maroon">Gallery</a>
+            <a href="shop.html" class="block py-2 text-gray-600 hover:text-maroon">Shop</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gray-700 py-20 md:py-32 text-white text-center">
+            <div class="absolute inset-0">
+                <img src="https://v.greattibettour.com/photos/20180403/tibetan-monks-36984.jpg" class="w-full h-full object-cover opacity-30" alt="Hands offering a lotus flower">
+            </div>
+            <div class="container mx-auto px-6 relative">
+                <h1 class="text-4xl md:text-5xl font-serif mb-4">Preserve a Legacy, Support the Sangha</h1>
+                <p class="text-lg text-gray-200 max-w-3xl mx-auto">Your generosity helps us protect and share the timeless wisdom of Sikkim's monastic traditions with the world.</p>
+            </div>
+        </section>
+
+        <!-- Donation Form and Info Section -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap lg:flex-nowrap -mx-4">
+
+                    <!-- Left Column: Why Support Us -->
+                    <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                        <h2 class="text-3xl font-serif text-maroon mb-6">How Your Gift Helps</h2>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            MESWO is dedicated to the preservation and promotion of Sikkim's invaluable spiritual heritage. Contributions from compassionate individuals like you are the lifeblood of our work. Your support ensures that ancient monasteries stand strong, that precious texts are archived for future generations, and that the profound teachings of the Dharma continue to inspire peace and wisdom.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-saffron-light flex items-center justify-center">
+                                    <i class="fas fa-landmark text-maroon"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-800">Monastery Restoration</h4>
+                                    <p class="text-gray-600 mt-1">Help us maintain and restore sacred temples, stupas, and murals that are centuries old.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-saffron-light flex items-center justify-center">
+                                    <i class="fas fa-book-open text-maroon"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-800">Education & Archives</h4>
+                                    <p class="text-gray-600 mt-1">Support the education of young monks and nuns, and help us digitize and preserve ancient manuscripts.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-saffron-light flex items-center justify-center">
+                                    <i class="fas fa-users text-maroon"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-800">Community Support</h4>
+                                    <p class="text-gray-600 mt-1">Provide for the basic needs of the monastic community, including food, healthcare, and utilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Donation Form -->
+                    <div class="w-full lg:w-1/2 px-4">
+                        <div class="bg-white p-8 rounded-lg shadow-xl sticky top-28">
+                            <h3 class="text-2xl font-serif text-center mb-6">Make a Generous Offering</h3>
+                            
+                            <form id="donation-form">
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">Donation Type</label>
+                                    <div class="flex rounded-md shadow-sm">
+                                        <button type="button" class="donation-type-btn flex-1 py-2 px-4 rounded-l-md bg-maroon text-white border border-maroon" data-type="one-time">One-Time</button>
+                                        <button type="button" class="donation-type-btn flex-1 py-2 px-4 rounded-r-md bg-white text-gray-700 border border-gray-300" data-type="monthly">Monthly</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">Choose an Amount (INR)</label>
+                                    <div class="grid grid-cols-3 gap-3 mb-4">
+                                        <div class="amount-btn" data-amount="500">₹500</div>
+                                        <div class="amount-btn selected" data-amount="1000">₹1,000</div>
+                                        <div class="amount-btn" data-amount="2500">₹2,500</div>
+                                        <div class="amount-btn" data-amount="5000">₹5,000</div>
+                                        <div class="amount-btn" data-amount="10000">₹10,000</div>
+                                        <div class="amount-btn" data-amount="other">Other</div>
+                                    </div>
+                                    <input type="number" id="custom-amount" class="form-input hidden" placeholder="Enter custom amount">
+                                    <input type="hidden" id="final-amount" name="amount" value="1000">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                                    <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                                </div>
+
+                                <button type="submit" class="w-full bg-saffron text-maroon-dark font-bold py-3 px-4 rounded-lg hover:bg-yellow-500 transition-all text-lg">
+                                    Donate Now
+                                </button>
+                                <p class="text-xs text-gray-500 text-center mt-4">
+                                    <i class="fas fa-lock mr-1"></i> Secure payment processing.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Donation Form Logic
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const customAmountInput = document.getElementById('custom-amount');
+        const finalAmountInput = document.getElementById('final-amount');
+        const donationTypeButtons = document.querySelectorAll('.donation-type-btn');
+
+        // Donation type toggle (One-Time / Monthly)
+        donationTypeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                donationTypeButtons.forEach(btn => {
+                    btn.classList.remove('bg-maroon', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                button.classList.add('bg-maroon', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-700');
+            });
+        });
+
+        // Amount selection logic
+        amountButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                amountButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+
+                const amount = button.dataset.amount;
+                if (amount === 'other') {
+                    customAmountInput.classList.remove('hidden');
+                    customAmountInput.focus();
+                    finalAmountInput.value = customAmountInput.value;
+                } else {
+                    customAmountInput.classList.add('hidden');
+                    customAmountInput.value = '';
+                    finalAmountInput.value = amount;
+                }
+            });
+        });
+
+        customAmountInput.addEventListener('input', () => {
+            finalAmountInput.value = customAmountInput.value;
+        });
+        
+        // Form submission simulation
+        document.getElementById('donation-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const amount = finalAmountInput.value;
+            if(name && amount > 0) {
+                 alert(`Thank you, ${name}, for your generous donation of ₹${amount}!`);
+            } else {
+                 alert('Please fill in all the required fields.');
+            }
+        });
+
+    </script>
+</body>
+</html>

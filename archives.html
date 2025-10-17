@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Archives - MESWO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #FF9933;
+            --off-white: #F8F7F4;
+            --dark-gray: #374151;
+            --light-gray: #6B7280;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .maroon { color: var(--maroon); }
+        .bg-maroon { background-color: var(--maroon); }
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="Homepage beta.html" class="text-2xl font-bold font-serif text-maroon">MESWO</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-600 hover:text-maroon transition-all">About</a>
+                <a href="monasteries.html" class="text-gray-600 hover:text-maroon transition-all">Monasteries</a>
+                <a href="archives.html" class="text-maroon font-semibold">Archives</a>
+                 <a href="shop.html" class="text-gray-600 hover:text-maroon transition-all">Shop</a>
+                <a href="visit.html" class="text-gray-600 hover:text-maroon transition-all">Visit</a>
+                <a href="events.html" class="text-gray-600 hover:text-maroon transition-all">Events</a>
+            </div>
+            <a href="support.html" class="hidden md:block bg-maroon text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Support Us</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-maroon">About</a>
+            <a href="monasteries.html" class="block py-2 text-gray-600 hover:text-maroon">Monasteries</a>
+            <a href="archives.html" class="block py-2 text-maroon font-semibold">Archives</a>
+            <a href="meditation.html" class="block py-2 text-gray-600 hover:text-maroon">Meditation</a>
+            <a href="visit.html" class="block py-2 text-gray-600 hover:text-maroon">Visit</a>
+            <a href="events.html" class="block py-2 text-gray-600 hover:text-maroon">Events</a>
+            <a href="support.html" class="block mt-2 bg-maroon text-white px-4 py-2 rounded-lg text-center">Support Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-serif text-maroon mb-4">The Dharma Treasury</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Explore a growing digital library of sacred texts, historical documents, and profound teachings from the monasteries of Sikkim.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white p-4 rounded-lg shadow-md mb-12 sticky top-24 z-40">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <input type="search" placeholder="Search title, author, or keyword..." class="md:col-span-2 w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                <select class="w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                    <option>All Categories</option>
+                    <option>Sutras</option>
+                    <option>Tantras</option>
+                    <option>Commentaries</option>
+                    <option>History</option>
+                </select>
+                <select class="w-full px-4 py-2 border rounded-lg focus:ring-maroon focus:border-maroon transition-all">
+                    <option>Sort by Date</option>
+                    <option>Sort by Popularity</option>
+                    <option>Sort by Title</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Archive List -->
+        <div class="space-y-8">
+            <!-- Item 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col md:flex-row items-start gap-6">
+                <img src="https://placehold.co/150x200/F8F7F4/800000?text=Text+Cover" alt="Text Cover" class="w-24 md:w-32 h-auto rounded-md object-cover">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500">Commentary • Nyingma Lineage</p>
+                    <h3 class="text-2xl font-serif text-maroon mt-1 mb-2">The Precious Garland of the Four Dharmas</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">A foundational text by Longchenpa on how to integrate the Dharma into one's life. This commentary clarifies the essential points of view, meditation, conduct, and fruition.</p>
+                    <a href="#" class="font-bold text-maroon hover:underline">Read Now &rarr;</a>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col md:flex-row items-start gap-6">
+                 <img src="https://placehold.co/150x200/F8F7F4/800000?text=Manuscript" alt="Manuscript" class="w-24 md:w-32 h-auto rounded-md object-cover">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500">Sutra • Kangyur Collection</p>
+                    <h3 class="text-2xl font-serif text-maroon mt-1 mb-2">The Heart Sutra (Prajñāpāramitā Hṛdaya)</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">A digitized manuscript of one of the most famous and essential sutras in Mahayana Buddhism, detailing the profound wisdom of emptiness.</p>
+                    <a href="#" class="font-bold text-maroon hover:underline">View Manuscript &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col md:flex-row items-start gap-6">
+                 <img src="https://placehold.co/150x200/F8F7F4/800000?text=History" alt="History Text" class="w-24 md:w-32 h-auto rounded-md object-cover">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500">History • 19th Century</p>
+                    <h3 class="text-2xl font-serif text-maroon mt-1 mb-2">The Crystal Mirror of Sikkim's History</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">An account of the establishment of the Dharma in Sikkim, detailing the lives of key figures and the founding of major monasteries. A vital historical document.</p>
+                    <a href="#" class="font-bold text-maroon hover:underline">Read Now &rarr;</a>
+                </div>
+            </div>
+            
+             <!-- Item 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col md:flex-row items-start gap-6">
+                 <img src="https://placehold.co/150x200/F8F7F4/800000?text=Tantra" alt="Tantra Text" class="w-24 md:w-32 h-auto rounded-md object-cover">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-500">Tantra • Kagyu Lineage</p>
+                    <h3 class="text-2xl font-serif text-maroon mt-1 mb-2">Hevajra Tantra Root Text</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">A rare manuscript of a core tantric text central to the Kagyu school, outlining the path of transformation through deity practice.</p>
+                    <a href="#" class="font-bold text-maroon hover:underline">View Manuscript &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-16 flex justify-center items-center space-x-2">
+            <a href="#" class="px-4 py-2 bg-white border rounded-lg hover:bg-gray-100">&larr; Previous</a>
+            <a href="#" class="px-4 py-2 bg-maroon text-white rounded-lg border border-maroon">1</a>
+            <a href="#" class="px-4 py-2 bg-white border rounded-lg hover:bg-gray-100">2</a>
+            <a href="#" class="px-4 py-2 bg-white border rounded-lg hover:bg-gray-100">3</a>
+            <span class="text-gray-500">...</span>
+            <a href="#" class="px-4 py-2 bg-white border rounded-lg hover:bg-gray-100">25</a>
+            <a href="#" class="px-4 py-2 bg-white border rounded-lg hover:bg-gray-100">Next &rarr;</a>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold font-serif mb-4">MESWO</h3>
+                    <p class="text-gray-400 text-sm">Monastic Education and Spiritual Worship Organization</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="monasteries.html" class="text-gray-400 hover:text-white">Monasteries</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="archives.html" class="text-gray-400 hover:text-white">Dharma Archives</a></li>
+                        <li><a href="meditation.html" class="text-gray-400 hover:text-white">Meditation Guide</a></li>
+                        <li><a href="visit.html" class="text-gray-400 hover:text-white">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 MESWO. Preserving the spiritual heritage of Sikkim for the benefit of all beings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
